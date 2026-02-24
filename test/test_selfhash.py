@@ -47,5 +47,16 @@ class TestSecrets(unittest.TestCase):
          '<span id="cR%22AZ%22Y%21"></span>'
          '.</p>')
         
+    def test_hidden(self):
+        md_input = '2. {!#item-two} Share this.'
+        self.assertExpectedMarkdown(md_input, 
+         '<ol>\n'
+         '<li>'
+         '<a href="#item-two" class="mkdselfhash"></a>'
+         '<span id="item-two"></span>'
+         ' Share this.'
+         '</li>\n'
+         '</ol>')
+        
 if __name__ == '__main__':
     unittest.main()
