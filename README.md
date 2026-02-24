@@ -16,4 +16,4 @@ pip install mkdselfhash
 1. Run `python -m pytest`. 
 
 [PYTHON_MARKDOWN]: https://github.com/waylan/Python-Markdown
-[PYPI]: https://github.com/TheMaverickProgrammer/python-markdown-mkdselfhash
+[PYPI]: https://pypi.org/project/mkdselfhash/0.0.1/
