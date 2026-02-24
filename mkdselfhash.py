@@ -11,7 +11,7 @@ class SelfHashExtension(Extension):
     def extendMarkdown(self, md):
         md.registerExtension(self)
         md.preprocessors.register(
-            SelfHasher(md), "selfhasher", 20)
+            SelfHasher(md), "selfhasher", 1)
 
 class SelfHasher(Preprocessor):
     def run(self, lines):
