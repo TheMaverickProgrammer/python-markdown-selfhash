@@ -30,7 +30,7 @@ class SelfHasher(Preprocessor):
     def _html(self, s):
          us = urllib.parse.quote(s)
          hs = escape(s, quote=True)
-         return '<a href="#' + us + '">' + hs + '</a><span id="' + us + '" class="mkdselfhash"/>'
+         return '<a href="#' + us + '" class="mkdselfhash">' + hs + '</a><span id="' + us + '"></span>'
 
 def makeExtension(*args, **kwargs):
         return SelfHashExtension(*args, **kwargs)

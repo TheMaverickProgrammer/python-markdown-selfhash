@@ -19,8 +19,8 @@ class TestSecrets(unittest.TestCase):
         self.assertExpectedMarkdown(md_input, 
          '<ol>\n'
          '<li>'
-         '<a href="#item-one">item-one</a>'
-         '<span id="item-one" class="mkdselfhash"/>'
+         '<a href="#item-one" class="mkdselfhash">item-one</a>'
+         '<span id="item-one"></span>'
          ' Share this.'
          '</li>\n'
          '</ol>')
@@ -30,11 +30,11 @@ class TestSecrets(unittest.TestCase):
         self.assertExpectedMarkdown(md_input, 
          '<ol>\n'
          '<li>'
-         '<a href="#item-one">item-one</a>'
-         '<span id="item-one" class="mkdselfhash"/>'
+         '<a href="#item-one" class="mkdselfhash">item-one</a>'
+         '<span id="item-one"></span>'
          ' Share this. But there is also '
-         '<a href="#this">this</a>'
-         '<span id="this" class="mkdselfhash"/>'
+         '<a href="#this" class="mkdselfhash">this</a>'
+         '<span id="this"></span>'
          '!'
          '</li>\n'
          '</ol>')
@@ -43,8 +43,8 @@ class TestSecrets(unittest.TestCase):
         md_input = 'This link is {#cR"AZ"Y!}.'
         self.assertExpectedMarkdown(md_input, 
          '<p>This link is '
-         '<a href="#cR%22AZ%22Y%21">cR&quot;AZ&quot;Y!</a>'
-         '<span id="cR%22AZ%22Y%21" class="mkdselfhash"/>'
+         '<a href="#cR%22AZ%22Y%21" class="mkdselfhash">cR&quot;AZ&quot;Y!</a>'
+         '<span id="cR%22AZ%22Y%21"></span>'
          '.</p>')
         
 if __name__ == '__main__':
