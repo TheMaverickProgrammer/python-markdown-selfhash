@@ -5,7 +5,7 @@ from markdown.preprocessors import Preprocessor
 from markdown.extensions import Extension
 
 show_pattern = r'{#(.*?)}'
-hide_pattern = r'{!#(.*?)}'
+hide_pattern = r'{-#(.*?)}'
 
 class SelfHashExtension(Extension):
     def extendMarkdown(self, md):
@@ -28,7 +28,7 @@ class SelfHasher(Preprocessor):
             m = re.findall(hide_pattern, line)
             if len(m) > 0:
                  for n in m:
-                    subpattern = r'{!#'+n+r'}'
+                    subpattern = r'{-#'+n+r'}'
                     html = self._html(n, show_content=False)
                     line = re.sub(subpattern, html, line)
 

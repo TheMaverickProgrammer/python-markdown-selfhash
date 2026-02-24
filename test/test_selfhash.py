@@ -48,12 +48,12 @@ class TestSecrets(unittest.TestCase):
          '.</p>')
         
     def test_hidden(self):
-        md_input = '2. {!#item-two} Share this.'
+        md_input = '2. {-#2} Share this.'
         self.assertExpectedMarkdown(md_input, 
          '<ol>\n'
          '<li>'
-         '<a href="#item-two" class="mkdselfhash"></a>'
-         '<span id="item-two"></span>'
+         '<a href="#2" class="mkdselfhash"></a>'
+         '<span id="2"></span>'
          ' Share this.'
          '</li>\n'
          '</ol>')

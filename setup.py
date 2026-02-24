@@ -5,5 +5,5 @@ setuptools.setup(
             install_requires=['markdown>=3'],
             tests_require=['mkdocs'],
             py_modules=['mkdselfhash'],
-            version="0.0.4",
+            version="0.0.5",
             )

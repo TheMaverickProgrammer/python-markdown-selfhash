@@ -3,7 +3,7 @@ A [Python-Markdown][PYTHON_MARKDOWN] preprocessor extension that creates in-plac
 
 Transforms `{#str}` into `<a href="#str" class="mkdselfhash">str</a><span id="str"/>`.
 
-For empty anchor elements use `{!#str}` notation.
+For empty anchor elements use `{-#str}` notation.
 
 View this package on [PyPi][PYPI].
 
